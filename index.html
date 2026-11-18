@@ -1,0 +1,1167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dhivya Mahalakshmi · Thermoelectrics</title>
+<meta name="description" content="C. N. Dhivya Mahalakshmi: doctoral researcher designing thermoelectric materials at Shizuoka University, Japan and SRMIST, India. Research, publications, talks and contact.">
+<meta name="author" content="C. N. Dhivya Mahalakshmi">
+<link rel="canonical" href="https://dhivya2801.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://dhivya2801.github.io/">
+<meta property="og:image" content="https://dhivya2801.github.io/photo.jpg">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="C. N. Dhivya Mahalakshmi · Thermoelectric materials researcher">
+<meta property="og:description" content="Heat and charge transport in low-dimensional halide perovskites. Publications, talks and contact.">
+<meta name="theme-color" content="#f3eee3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%232b5f8e'/%3E%3Cstop offset='.55' stop-color='%2394406d'/%3E%3Cstop offset='1' stop-color='%23cf4a14'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-style='italic' font-size='30' text-anchor='middle' fill='%23fff'%3EDM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<script>
+(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('dm-theme');if(t==='light'||t==='dark')d.setAttribute('data-theme',t);}catch(e){}})();
+</script>
+<style>
+:root{
+  --paper:#f3eee3; --paper-2:#e9e1d0; --card:#fbf8f1; --card-2:#f5efe3;
+  --ink:#172039; --ink-2:#465069; --ink-3:#6c7387;
+  --line:#d6cbb3; --line-2:#e4dac6; --dot:rgba(23,32,57,.075);
+  --cold:#2b5f8e; --mid:#94406d; --hot:#cf4a14; --amber:#e39410;
+  --hot-ink:#a93a0c; --c-bg:#172039; --c-fg:#f3eee3; --c-lbl:#f2ac45; --ok:#2c7350; --ok-bg:rgba(44,115,80,.1); --warn:#8a5a00; --warn-bg:rgba(227,148,16,.14);
+  --shadow:0 1px 0 rgba(23,32,57,.04),0 10px 28px -16px rgba(23,32,57,.28);
+  --thermal:linear-gradient(90deg,var(--cold),var(--mid) 45%,var(--hot) 76%,var(--amber));
+  --radius:16px;
+  --serif:'Newsreader','Iowan Old Style',Georgia,serif;
+  --sans:'Atkinson Hyperlegible',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0e1320; --paper-2:#141b2b; --card:#151c2c; --card-2:#1b2337;
+    --ink:#ede7da; --ink-2:#b5bbca; --ink-3:#8a91a3;
+    --line:#2d3752; --line-2:#232c42; --dot:rgba(237,231,218,.055);
+    --cold:#5d93cc; --mid:#c0548d; --hot:#ff6a2b; --amber:#ffb238;
+    --hot-ink:#ff9058; --c-bg:#1c2645; --c-fg:#ede7da; --c-lbl:#ffb238; --ok:#6fcf9b; --ok-bg:rgba(111,207,155,.12); --warn:#ffc66b; --warn-bg:rgba(255,178,56,.13);
+    --shadow:0 1px 0 rgba(0,0,0,.25),0 12px 32px -16px rgba(0,0,0,.7);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0e1320; --paper-2:#141b2b; --card:#151c2c; --card-2:#1b2337;
+  --ink:#ede7da; --ink-2:#b5bbca; --ink-3:#8a91a3;
+  --line:#2d3752; --line-2:#232c42; --dot:rgba(237,231,218,.055);
+  --cold:#5d93cc; --mid:#c0548d; --hot:#ff6a2b; --amber:#ffb238;
+  --hot-ink:#ff9058; --c-bg:#1c2645; --c-fg:#ede7da; --c-lbl:#ffb238; --ok:#6fcf9b; --ok-bg:rgba(111,207,155,.12); --warn:#ffc66b; --warn-bg:rgba(255,178,56,.13);
+  --shadow:0 1px 0 rgba(0,0,0,.25),0 12px 32px -16px rgba(0,0,0,.7);
+  color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background-color:var(--paper);color:var(--ink);
+  font:400 17px/1.6 var(--sans);
+  background-image:radial-gradient(var(--dot) 1.1px,transparent 1.4px);
+  background-size:24px 24px;
+  overflow-x:hidden;
+  transition:background-color .3s,color .3s;
+}
+img{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--hot);outline-offset:3px;border-radius:6px}
+.mono{font-family:var(--mono)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.i{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+sub,sup{font-size:.68em;line-height:0}
+
+/* ---------- top bar ---------- */
+.topbar{
+  position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:8px;
+  padding:10px 12px 10px 16px;padding-top:max(10px,env(safe-area-inset-top));
+  background:var(--paper);
+  background:color-mix(in srgb,var(--paper) 84%,transparent);
+  -webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px);
+  border-bottom:1px solid var(--line-2);
+}
+.brand{flex:none;font:italic 600 21px/1 var(--serif);text-decoration:none;color:var(--ink);padding:4px 2px}
+.brand span{color:var(--hot)}
+.tabs{
+  flex:1;min-width:0;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 10px,#000 calc(100% - 18px),transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 10px,#000 calc(100% - 18px),transparent);
+  padding:0 10px;
+}
+.tabs::-webkit-scrollbar{display:none}
+.tabs a{
+  flex:none;font:500 12.5px/1 var(--mono);letter-spacing:.02em;color:var(--ink-2);
+  text-decoration:none;padding:9px 11px;border-radius:999px;transition:background .25s,color .25s;
+}
+.tabs a:hover{color:var(--ink)}
+.tabs a.active{background:var(--ink);color:var(--paper)}
+.icon-btn{
+  flex:none;display:inline-grid;place-items:center;width:40px;height:40px;border-radius:12px;
+  border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;
+  transition:transform .15s,border-color .2s;
+}
+.icon-btn:hover{border-color:var(--ink-3)}
+.icon-btn:active{transform:scale(.94)}
+.theme-btn .sun{display:none}
+:root[data-theme="dark"] .theme-btn .sun{display:block}
+:root[data-theme="dark"] .theme-btn .moon{display:none}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .theme-btn .sun{display:block}
+  :root:not([data-theme="light"]) .theme-btn .moon{display:none}
+}
+.progress{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--thermal);transform-origin:left;transform:scaleX(0)}
+
+/* ---------- layout ---------- */
+main{max-width:900px;margin:0 auto;padding:0 16px 40px}
+section{scroll-margin-top:72px}
+.sec{padding-top:72px}
+.sec-head{display:flex;align-items:baseline;gap:12px;margin:0 0 22px}
+.sec-num{font:500 12px/1 var(--mono);color:var(--hot-ink);letter-spacing:.06em}
+.sec-head h2{margin:0;font:500 clamp(28px,7vw,38px)/1.1 var(--serif);letter-spacing:-.01em}
+.sec-head h2 em{font-style:italic;color:var(--ink-2)}
+.sec-rule{flex:1;height:1px;background:var(--line);align-self:center;min-width:24px}
+.sec-intro{margin:-8px 0 22px;color:var(--ink-2);max-width:60ch}
+
+/* reveal on scroll (only when JS is on) */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---------- hero ---------- */
+.hero{padding:30px 0 4px;display:grid;gap:18px}
+.hero-top{display:flex;align-items:center;gap:16px}
+.portrait{
+  flex:none;width:104px;height:104px;border-radius:50%;padding:3px;position:relative;
+  background:conic-gradient(from 210deg,var(--cold),var(--mid),var(--hot),var(--amber),var(--cold));
+}
+.portrait img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%;border:3px solid var(--paper)}
+.portrait .now{
+  position:absolute;right:-4px;bottom:4px;font:500 10.5px/1 var(--mono);letter-spacing:.04em;
+  background:var(--ink);color:var(--paper);padding:5px 7px;border-radius:999px;border:2px solid var(--paper);
+}
+.eyebrow{margin:0;font:500 12.5px/1.55 var(--mono);color:var(--ink-2);letter-spacing:.04em;text-transform:uppercase}
+.eyebrow b{display:block;color:var(--ink);font-weight:500}
+.name{margin:6px 0 0;font:500 clamp(46px,14vw,92px)/.92 var(--serif);letter-spacing:-.025em}
+.name small{display:block;font:500 13px/1 var(--mono);letter-spacing:.14em;color:var(--ink-3);margin-bottom:12px}
+.name em{
+  display:block;font-style:italic;font-weight:400;
+  background:var(--thermal);-webkit-background-clip:text;background-clip:text;color:transparent;
+  padding-right:.08em;
+}
+.lede{margin:4px 0 0;font:400 clamp(19px,4.6vw,23px)/1.45 var(--serif);color:var(--ink);max-width:34ch}
+.lede mark{background:none;color:var(--hot-ink);font-style:italic}
+.places{display:flex;flex-wrap:wrap;gap:6px 16px;margin:0;padding:0;list-style:none;color:var(--ink-2);font-size:15px}
+.places li{display:flex;align-items:center;gap:6px}
+.places .i{width:16px;height:16px;color:var(--hot)}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 16px;
+  border-radius:13px;border:1px solid var(--line);background:var(--card);color:var(--ink);
+  font:700 15px/1 var(--sans);text-decoration:none;cursor:pointer;
+  transition:transform .15s,border-color .2s,background .2s,box-shadow .2s;
+}
+.btn:hover{border-color:var(--ink-3)}
+.btn:active{transform:translateY(1px) scale(.98)}
+.btn.primary{background:var(--ink);color:var(--paper);border-color:var(--ink);box-shadow:var(--shadow)}
+.btn.primary .i{color:var(--amber)}
+.js .hero > *{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.js .hero > *:nth-child(2){animation-delay:.08s}
+.js .hero > *:nth-child(3){animation-delay:.16s}
+.js .hero > *:nth-child(4){animation-delay:.24s}
+.js .hero > *:nth-child(5){animation-delay:.32s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* ---------- stats ---------- */
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin:34px 0 0;padding:0;list-style:none;
+  background:var(--line-2);border:1px solid var(--line-2);border-radius:var(--radius);overflow:hidden}
+.stats li{background:var(--card);padding:16px 16px 14px}
+.stat-n{display:block;font:500 40px/1 var(--serif);letter-spacing:-.02em}
+.stat-n sup{font-size:.45em;vertical-align:top;line-height:1.4;color:var(--hot-ink)}
+.stat-l{display:block;margin-top:6px;font-size:14px;line-height:1.35;color:var(--ink-2)}
+
+/* ---------- research ---------- */
+.summary{margin:0 0 20px;font:400 clamp(20px,4.8vw,25px)/1.45 var(--serif);max-width:38ch}
+.summary strong{font-weight:500;background:linear-gradient(transparent 62%,color-mix(in srgb,var(--amber) 32%,transparent) 0)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.tag{font:500 13px/1 var(--mono);padding:9px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink-2)}
+.tag.key{border-color:transparent;background:var(--ink);color:var(--paper)}
+
+/* ---------- heat demo ---------- */
+.demo{background:var(--card);border:1px solid var(--line-2);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+.demo-stage{position:relative;height:clamp(230px,52vw,330px);border-bottom:1px solid var(--line-2);
+  background:radial-gradient(120% 90% at 0% 50%,color-mix(in srgb,var(--hot) 10%,transparent),transparent 55%),
+             radial-gradient(120% 90% at 100% 50%,color-mix(in srgb,var(--cold) 10%,transparent),transparent 55%)}
+#lattice{display:block;width:100%;height:100%;touch-action:pan-y;cursor:crosshair}
+.side-label{position:absolute;top:10px;font:500 10.5px/1 var(--mono);letter-spacing:.1em;padding:5px 7px;border-radius:6px;pointer-events:none}
+.side-label.hot{left:10px;color:var(--hot-ink);background:color-mix(in srgb,var(--hot) 12%,transparent)}
+.side-label.cold{right:10px;color:var(--cold);background:color-mix(in srgb,var(--cold) 12%,transparent)}
+.touch-hint{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);font:500 11.5px/1 var(--mono);color:var(--ink-3);
+  background:var(--card);border:1px solid var(--line-2);padding:6px 10px;border-radius:999px;white-space:nowrap;pointer-events:none;transition:opacity .4s}
+.demo-ui{padding:16px;display:grid;gap:16px}
+.seg{position:relative;display:grid;grid-template-columns:1fr 1fr;padding:4px;border-radius:14px;background:var(--paper-2);border:1px solid var(--line-2)}
+.seg button{position:relative;z-index:1;min-height:44px;border:0;background:none;border-radius:10px;cursor:pointer;
+  font:700 15px/1.15 var(--sans);color:var(--ink-2);padding:8px 6px;transition:color .3s}
+.seg button[aria-pressed="true"]{color:var(--paper)}
+.seg .knob{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:10px;background:var(--ink);
+  transition:transform .45s cubic-bezier(.3,1.3,.5,1)}
+.seg[data-mode="glass"] .knob{transform:translateX(100%);background:linear-gradient(120deg,var(--mid),var(--hot))}
+.seg[data-mode="glass"] button[aria-pressed="true"]{color:#fff}
+.seg button small{display:block;font:400 11px/1.3 var(--mono);opacity:.75;margin-top:2px}
+.meters{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.meter{background:var(--card-2);border:1px solid var(--line-2);border-radius:12px;padding:11px 12px 12px}
+.meter-top{display:flex;justify-content:space-between;align-items:baseline;gap:6px}
+.meter-l{font:500 11.5px/1.25 var(--mono);color:var(--ink-2);letter-spacing:.02em}
+.meter-v{font:500 22px/1 var(--serif);font-variant-numeric:tabular-nums}
+.bar{height:8px;margin-top:9px;border-radius:99px;background:var(--line-2);overflow:hidden}
+.bar i{display:block;height:100%;border-radius:inherit;transform-origin:left;transform:scaleX(0)}
+.bar.k i{background:linear-gradient(90deg,var(--cold),var(--ink-3))}
+.bar.v i{background:var(--thermal)}
+.demo-text{margin:0;color:var(--ink-2);font-size:16px;min-height:4.8em;transition:opacity .25s}
+.demo-text b{color:var(--ink)}
+.demo-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.fine{font:400 12px/1.4 var(--mono);color:var(--ink-3)}
+.btn-sm{display:inline-flex;align-items:center;gap:6px;min-height:38px;padding:7px 12px;border-radius:10px;border:1px solid var(--line);
+  background:var(--card);color:var(--ink);font:500 13px/1 var(--mono);text-decoration:none;cursor:pointer;transition:border-color .2s,transform .15s}
+.btn-sm:hover{border-color:var(--ink-3)}
+.btn-sm:active{transform:scale(.97)}
+.btn-sm .i{width:15px;height:15px}
+
+/* ---------- filter chips ---------- */
+.filters{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 -16px 16px;padding:2px 16px}
+.filters::-webkit-scrollbar{display:none}
+.chip{flex:none;display:inline-flex;align-items:center;gap:7px;min-height:40px;padding:8px 14px;border-radius:999px;
+  border:1px solid var(--line);background:var(--card);color:var(--ink-2);font:700 14px/1 var(--sans);cursor:pointer;transition:all .2s}
+.chip span{font:500 11.5px/1 var(--mono);opacity:.7}
+.chip:hover{color:var(--ink);border-color:var(--ink-3)}
+.chip.on{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.pop{animation:pop .45s cubic-bezier(.2,.7,.2,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ---------- publications ---------- */
+.pubs{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.pub details{background:var(--card);border:1px solid var(--line-2);border-radius:var(--radius);transition:border-color .25s,box-shadow .25s}
+.pub details[open]{border-color:var(--line);box-shadow:var(--shadow)}
+.pub summary{list-style:none;cursor:pointer;padding:16px 46px 16px 16px;position:relative;display:grid;gap:8px}
+.pub summary::-webkit-details-marker{display:none}
+.pub-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font:500 12px/1 var(--mono);color:var(--ink-3)}
+.badge{display:inline-flex;align-items:center;gap:5px;padding:5px 8px;border-radius:7px;font:500 11px/1 var(--mono);letter-spacing:.03em}
+.badge.ok{background:var(--ok-bg);color:var(--ok)}
+.badge.ok::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.badge.rev{background:var(--warn-bg);color:var(--warn)}
+.badge.sub{background:var(--paper-2);color:var(--ink-2)}
+.badge.first{border:1px solid color-mix(in srgb,var(--hot) 50%,transparent);color:var(--hot-ink)}
+.pub-title{margin:0;font:500 19px/1.32 var(--serif);letter-spacing:-.005em}
+.pub-venue{margin:0;font-size:15px;color:var(--ink-2)}
+.pub-venue em{color:var(--ink)}
+.chev{position:absolute;right:14px;top:18px;width:24px;height:24px;border-radius:8px;display:grid;place-items:center;color:var(--ink-3);transition:transform .3s,background .2s}
+.pub details[open] .chev{transform:rotate(180deg);background:var(--paper-2);color:var(--ink)}
+.pub-body{padding:0 16px 16px;display:grid;gap:12px;border-top:1px dashed var(--line-2);margin:0 16px;padding:14px 0 16px}
+.authors{margin:0;font-size:15px;color:var(--ink-2)}
+.authors strong{color:var(--ink);font-weight:700;background:linear-gradient(transparent 60%,color-mix(in srgb,var(--amber) 30%,transparent) 0)}
+.pub-actions{display:flex;flex-wrap:wrap;gap:8px}
+
+/* ---------- timeline ---------- */
+.timeline{list-style:none;margin:0;padding:0 0 0 26px;position:relative}
+.timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:14px;width:2px;border-radius:2px;
+  background:linear-gradient(180deg,var(--hot),var(--mid) 45%,var(--cold))}
+.tl{position:relative;padding:0 0 22px}
+.tl::before{content:"";position:absolute;left:-25px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--paper);border:3px solid var(--c,var(--cold))}
+.tl.now::before{background:var(--c);animation:pulse 2.6s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--hot) 45%,transparent)}70%,100%{box-shadow:0 0 0 12px transparent}}
+.tl-card{background:var(--card);border:1px solid var(--line-2);border-radius:var(--radius);padding:14px 16px}
+.tl-when{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font:500 12px/1 var(--mono);color:var(--ink-3);letter-spacing:.02em}
+.tl-when .now-pill{background:var(--hot);color:#fff;padding:4px 7px;border-radius:6px;font-size:10.5px;letter-spacing:.06em}
+.tl-where-pill{margin-left:auto;padding:4px 7px;border-radius:6px;border:1px solid var(--line);font-size:10.5px;letter-spacing:.06em}
+.tl h3{margin:9px 0 4px;font:500 20px/1.25 var(--serif)}
+.tl p{margin:0;font-size:15px;color:var(--ink-2)}
+.tl .extra{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line-2);font-size:14.5px}
+.grade{display:inline-block;margin:8px 6px 0 0;font:500 12px/1 var(--mono);padding:6px 8px;border-radius:7px;background:var(--paper-2);color:var(--ink)}
+.grade.gold{background:color-mix(in srgb,var(--amber) 22%,transparent);color:var(--warn)}
+
+/* ---------- talks ---------- */
+.talks-wrap{position:relative}
+.talks{list-style:none;display:grid;grid-auto-flow:column;grid-auto-columns:min(84%,330px);gap:12px;overflow-x:auto;
+  scroll-snap-type:x mandatory;scroll-padding:0 16px;margin:0 -16px;padding:4px 16px 16px;scrollbar-width:none}
+.talks::-webkit-scrollbar{display:none}
+.talk{scroll-snap-align:start;display:flex;flex-direction:column;gap:10px;background:var(--card);border:1px solid var(--line-2);border-radius:var(--radius);padding:16px;min-height:250px}
+.talk-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.talk-year{font:500 13px/1 var(--mono);color:var(--ink-3)}
+.talk-type{font:500 10.5px/1 var(--mono);letter-spacing:.07em;text-transform:uppercase;padding:5px 7px;border-radius:6px;background:var(--paper-2);color:var(--ink-2)}
+.talk-type.poster{background:color-mix(in srgb,var(--hot) 13%,transparent);color:var(--hot-ink)}
+.talk-type.oral{background:color-mix(in srgb,var(--mid) 15%,transparent);color:var(--mid)}
+.talk-acr{font:500 30px/1 var(--serif);letter-spacing:-.01em}
+.talk-title{margin:0;font:italic 400 17px/1.38 var(--serif);color:var(--ink)}
+.talk-ev{margin:auto 0 0;font-size:13.5px;line-height:1.4;color:var(--ink-3)}
+.talks-nav{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:2px}
+.talks-count{font:500 12.5px/1 var(--mono);color:var(--ink-3)}
+.talks-dots{display:flex;gap:6px}
+.talks-dots i{width:7px;height:7px;border-radius:50%;background:var(--line);transition:all .3s}
+.talks-dots i.on{width:20px;border-radius:4px;background:var(--hot)}
+
+/* ---------- skills ---------- */
+.skill-seg{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;margin:0 0 14px;font:500 12px/1 var(--mono);color:var(--ink-3)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.dot.h{background:var(--cold)} .dot.a{background:var(--hot)}
+.skills{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.skill{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:9px 13px;border-radius:12px;border:1px solid var(--line);
+  background:var(--card);color:var(--ink);font:700 14.5px/1.2 var(--sans);cursor:pointer;text-align:left;transition:opacity .3s,background .2s,color .2s,border-color .2s,transform .15s}
+.skill:active{transform:scale(.97)}
+.skill .dots{display:inline-flex;gap:3px}
+.skill.dim{opacity:.28}
+.skill.sel{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.skill-detail{margin-top:14px;padding:14px 16px;border-radius:var(--radius);background:var(--card-2);border:1px dashed var(--line);min-height:76px}
+.skill-detail .sd-name{display:block;font:500 12px/1 var(--mono);letter-spacing:.04em;color:var(--hot-ink);margin-bottom:7px;text-transform:uppercase}
+.skill-detail p{margin:0;font:400 18px/1.4 var(--serif)}
+
+/* ---------- awards ---------- */
+.awards{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.award{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--card);border:1px solid var(--line-2);border-radius:var(--radius);padding:16px}
+.medal{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font:500 18px/1 var(--serif);color:#fff;
+  background:radial-gradient(circle at 35% 30%,var(--amber),var(--hot) 70%);box-shadow:inset 0 -3px 0 rgba(0,0,0,.15)}
+.medal.silver{background:radial-gradient(circle at 35% 30%,#dfe3ea,#8b94a6 75%)}
+.medal.blue{background:radial-gradient(circle at 35% 30%,#7fb0e0,var(--cold) 75%)}
+.medal.plum{background:radial-gradient(circle at 35% 30%,#d48ab1,var(--mid) 75%)}
+.award h3{margin:0 0 4px;font:500 19px/1.3 var(--serif)}
+.award p{margin:0;font-size:15px;color:var(--ink-2)}
+.award .yr{display:block;margin-top:7px;font:500 12px/1 var(--mono);color:var(--ink-3)}
+
+/* ---------- references ---------- */
+.refs{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.ref{background:var(--card);border:1px solid var(--line-2);border-radius:var(--radius);padding:16px}
+.ref h3{margin:0 0 4px;font:500 19px/1.3 var(--serif)}
+.ref p{margin:0;font-size:15px;color:var(--ink-2)}
+
+/* ---------- contact ---------- */
+.contact{background:var(--c-bg);color:var(--c-fg);border:1px solid var(--line-2);border-radius:24px;padding:24px 18px;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;inset:auto -20% -60% -20%;height:90%;background:radial-gradient(closest-side,color-mix(in srgb,var(--hot) 45%,transparent),transparent);opacity:.55;pointer-events:none}
+.contact > *{position:relative}
+.contact h2{margin:0 0 6px;font:500 clamp(30px,8vw,44px)/1.05 var(--serif)}
+.contact h2 em{font-style:italic;color:var(--c-lbl)}
+.contact > p{margin:0 0 18px;color:color-mix(in srgb,var(--c-fg) 75%,transparent)}
+.clist{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:8px}
+.clist li{display:flex;align-items:center;gap:8px;background:color-mix(in srgb,var(--c-fg) 8%,transparent);border:1px solid color-mix(in srgb,var(--c-fg) 14%,transparent);border-radius:14px;padding:6px 6px 6px 14px}
+.clist a{flex:1;min-width:0;text-decoration:none;padding:6px 0}
+.clist .lbl{display:block;font:500 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--c-lbl);margin-bottom:5px}
+.clist .val{display:block;font-size:15.5px;overflow-wrap:anywhere;line-height:1.3}
+.clist .icon-btn{background:transparent;border-color:color-mix(in srgb,var(--c-fg) 20%,transparent);color:var(--c-fg)}
+.contact .actions .btn{background:var(--c-fg);color:var(--c-bg);border-color:var(--c-fg)}
+.contact .actions .btn.ghost{background:transparent;color:var(--c-fg);border-color:color-mix(in srgb,var(--c-fg) 28%,transparent)}
+.contact .actions .btn .i{color:var(--hot)}
+.contact .actions .btn.ghost .i{color:var(--c-lbl)}
+
+footer{max-width:900px;margin:0 auto;padding:26px 16px calc(36px + env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font:400 12px/1.5 var(--mono);color:var(--ink-3)}
+
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translate(-50%,20px);opacity:0;z-index:80;
+  background:var(--ink);color:var(--paper);font:500 13.5px/1 var(--mono);padding:12px 16px;border-radius:12px;box-shadow:var(--shadow);transition:all .3s;pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- wider screens ---------- */
+@media (min-width:720px){
+  main{padding:0 28px 48px}
+  .filters,.talks{margin-left:-28px;margin-right:-28px;padding-left:28px;padding-right:28px}
+  .talks{scroll-padding:0 28px}
+  .hero{grid-template-columns:1fr 230px;align-items:center;padding-top:56px;column-gap:40px}
+  .hero-top{display:contents}
+  .hero-top .portrait{grid-column:2;grid-row:1 / span 5;width:230px;height:230px;padding:4px;justify-self:end}
+  .hero-top .portrait .now{font-size:12px;right:10px;bottom:16px;padding:7px 10px}
+  .hero-top .eyebrow{grid-column:1;grid-row:1}
+  .hero > .name{grid-column:1}
+  .hero > *:not(.hero-top){grid-column:1}
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .meters{gap:14px}
+  .demo-ui{padding:20px 22px 22px}
+  .awards,.refs{grid-template-columns:1fr 1fr}
+  .contact{padding:36px 34px}
+  .clist{grid-template-columns:1fr 1fr}
+  .clist li:first-child{grid-column:1 / -1}
+}
+@media (min-width:1000px){
+  .talks{grid-auto-columns:300px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-add" viewBox="0 0 24 24"><path d="M15 20v-1.5a4 4 0 0 0-4-4H6.5a4 4 0 0 0-4 4V20"/><circle cx="8.75" cy="7.5" r="3.75"/><path d="M19 8.5v6M22 11.5h-6"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 9.5 12 4.5 2 9.5l10 5 10-5Z"/><path d="M6 11.6V16c3.3 2.4 8.7 2.4 12 0v-4.4M22 9.5V15"/></symbol>
+  <symbol id="i-orcid" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M8.3 10.2v6M8.3 7.4v.1M11.4 10.2v6h1.9a3 3 0 0 0 0-6h-1.9Z"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5.5" r="2.7"/><circle cx="6" cy="12" r="2.7"/><circle cx="18" cy="18.5" r="2.7"/><path d="m8.4 13.3 7.2 3.9M15.6 6.8 8.4 10.7"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11.5" height="11.5" rx="2.2"/><path d="M5.5 15H5a1.5 1.5 0 0 1-1.5-1.5V5A1.5 1.5 0 0 1 5 3.5h8.5A1.5 1.5 0 0 1 15 5v.5"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.2a7 7 0 0 1 14 0C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.8" r="2.4"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 6-6 6 6 6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+  <symbol id="i-reset" viewBox="0 0 24 24"><path d="M3.5 12a8.5 8.5 0 1 0 2.6-6.1L3.5 8.5"/><path d="M3.5 3.5v5h5"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></symbol>
+</svg>
+
+<header class="topbar">
+  <a class="brand" href="#top" aria-label="Back to top">DM<span>.</span></a>
+  <nav class="tabs" aria-label="Sections">
+    <a href="#research">Research</a>
+    <a href="#demo">Heat demo</a>
+    <a href="#papers">Papers</a>
+    <a href="#journey">Journey</a>
+    <a href="#talks">Talks</a>
+    <a href="#skills">Skills</a>
+    <a href="#awards">Awards</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="icon-btn theme-btn" id="themeBtn" type="button" aria-label="Switch light or dark theme">
+    <svg class="i moon"><use href="#i-moon"/></svg><svg class="i sun"><use href="#i-sun"/></svg>
+  </button>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top" aria-label="Introduction">
+  <div class="hero-top">
+    <div class="portrait">
+      <img src="photo.jpg" width="640" height="640" alt="Portrait of C. N. Dhivya Mahalakshmi" fetchpriority="high">
+      <span class="now">PhD · 2026</span>
+    </div>
+    <p class="eyebrow"><b>Doctoral researcher</b>Thermoelectric materials</p>
+  </div>
+  <h1 class="name"><small>MS. C. N.</small>Dhivya <em>Mahalakshmi</em></h1>
+  <p class="lede">Designing materials that turn <mark>waste heat into electricity</mark> by controlling how heat and charge move through halide perovskites.</p>
+  <ul class="places">
+    <li><svg class="i"><use href="#i-pin"/></svg>Shizuoka University, Japan</li>
+    <li><svg class="i"><use href="#i-pin"/></svg>SRMIST, Chennai, India</li>
+  </ul>
+  <div class="actions">
+    <a class="btn primary" href="dhivya-mahalakshmi.vcf" download="Dhivya-Mahalakshmi.vcf"><svg class="i"><use href="#i-add"/></svg>Save contact</a>
+    <a class="btn" href="mailto:dhivya.mahalakshmi.25@shizuoka.ac.jp"><svg class="i"><use href="#i-mail"/></svg>Email</a>
+    <a class="btn" href="https://scholar.google.com/citations?user=x8tt12AAAAAJ&amp;hl=en" target="_blank" rel="noopener"><svg class="i"><use href="#i-cap"/></svg>Scholar</a>
+    <a class="btn" href="https://orcid.org/0009-0005-5352-1912" target="_blank" rel="noopener"><svg class="i"><use href="#i-orcid"/></svg>ORCID</a>
+    <button class="btn" id="shareBtn" type="button"><svg class="i"><use href="#i-share"/></svg>Share</button>
+  </div>
+</section>
+
+<ul class="stats reveal" id="stats" aria-label="At a glance">
+  <li><span class="stat-n" data-count="6">6</span><span class="stat-l">First-author papers, 3 in print</span></li>
+  <li><span class="stat-n" data-count="5">5</span><span class="stat-l">Conference presentations</span></li>
+  <li><span class="stat-n" data-count="2">2</span><span class="stat-l">Doctoral programmes, India &amp; Japan</span></li>
+  <li><span class="stat-n"><sup>#</sup><span data-count="1">1</span></span><span class="stat-l">University rank, M.Sc. Chemistry</span></li>
+</ul>
+
+<!-- ============ RESEARCH ============ -->
+<section class="sec" id="research">
+  <div class="sec-head reveal"><span class="sec-num">01</span><h2>Research</h2><span class="sec-rule"></span></div>
+  <p class="summary reveal">A researcher designing <strong>next-generation thermoelectric materials</strong>, with a strong foundation in chemistry. The focus: <strong>heat and charge transport</strong> in low-dimensional halide perovskites, steered through chemical bonding, lattice dynamics and phonon engineering.</p>
+  <ul class="tags reveal" aria-label="Research interests">
+    <li class="tag key">Thermoelectric materials</li>
+    <li class="tag key">Halide perovskites</li>
+    <li class="tag">Metal chalcogenides</li>
+    <li class="tag">Chalcohalides</li>
+    <li class="tag">Phonon engineering</li>
+    <li class="tag">Lattice dynamics</li>
+    <li class="tag">Wearable energy harvesting</li>
+  </ul>
+</section>
+
+<!-- ============ HEAT DEMO ============ -->
+<section class="sec" id="demo">
+  <div class="sec-head reveal"><span class="sec-num">02</span><h2>Heat, <em>slowed down</em></h2><span class="sec-rule"></span></div>
+  <p class="sec-intro reveal">A thermoelectric device makes voltage from a temperature difference. If heat rushes straight through the material, that difference disappears. Switch the material and watch the voltage.</p>
+  <div class="demo reveal">
+    <div class="demo-stage">
+      <canvas id="lattice" role="img" aria-label="Animated crystal lattice heated from the left side. Atoms change colour from blue to orange as they warm up."></canvas>
+      <span class="side-label hot">HOT SIDE</span>
+      <span class="side-label cold">COLD SIDE</span>
+      <span class="touch-hint" id="touchHint">Tap or swipe sideways to add heat</span>
+    </div>
+    <div class="demo-ui">
+      <div class="seg" id="modeSeg" data-mode="crystal" role="group" aria-label="Choose material">
+        <span class="knob" aria-hidden="true"></span>
+        <button type="button" data-mode="crystal" aria-pressed="true">Ordinary crystal<small>stiff, orderly bonds</small></button>
+        <button type="button" data-mode="glass" aria-pressed="false">Phonon glass<small>softened, rattling lattice</small></button>
+      </div>
+      <div class="meters">
+        <div class="meter">
+          <div class="meter-top"><span class="meter-l">Heat leak&nbsp;(κ)</span><span class="meter-v" id="kVal">1.00</span></div>
+          <div class="bar k"><i id="kBar"></i></div>
+        </div>
+        <div class="meter">
+          <div class="meter-top"><span class="meter-l">Voltage out&nbsp;(∝&nbsp;ΔT)</span><span class="meter-v" id="vVal">0%</span></div>
+          <div class="bar v"><i id="vBar"></i></div>
+        </div>
+      </div>
+      <p class="demo-text" id="demoText" aria-live="polite"><b>Ordinary crystal.</b> Lattice vibrations (phonons) carry heat straight across, so the hot and cold sides even out and very little voltage is produced.</p>
+      <div class="demo-foot">
+        <span class="fine">Illustrative model, not a simulation of real materials</span>
+        <button class="btn-sm" id="resetBtn" type="button"><svg class="i"><use href="#i-reset"/></svg>Reset</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PUBLICATIONS ============ -->
+<section class="sec" id="papers">
+  <div class="sec-head reveal"><span class="sec-num">03</span><h2>Publications</h2><span class="sec-rule"></span></div>
+  <p class="sec-intro reveal">First author on all six papers. Tap a paper for authors and the citation.</p>
+  <div class="filters reveal" id="pubFilters" role="group" aria-label="Filter publications">
+    <button type="button" class="chip on" data-filter="all" aria-pressed="true">All <span>6</span></button>
+    <button type="button" class="chip" data-filter="published" aria-pressed="false">Published <span>3</span></button>
+    <button type="button" class="chip" data-filter="review" aria-pressed="false">In review <span>3</span></button>
+  </div>
+  <ol class="pubs reveal" id="pubList">
+    <li class="pub" data-tags="published">
+      <details>
+        <summary>
+          <div class="pub-meta"><span class="badge ok">Published</span><span>2026</span></div>
+          <h3 class="pub-title">Synergistic lattice softening and polaron engineering in Cu<sup>2+</sup>-doped Cs<sub>2</sub>SnCl<sub>6</sub>: decoupling thermal and electrical transport for enhanced thermoelectric performance</h3>
+          <p class="pub-venue"><em>The Journal of Physical Chemistry Letters</em> 17 (10), 3030–3038</p>
+          <span class="chev"><svg class="i"><use href="#i-down"/></svg></span>
+        </summary>
+        <div class="pub-body">
+          <p class="authors"><strong>Chavali Naresh Dhivya Mahalakshmi</strong>, Mohamed Jibri Khaja Peer, Jayaram Archana, Navaneethan Mani</p>
+          <div class="pub-actions">
+            <button class="btn-sm" type="button" data-copy="Chavali Naresh Dhivya Mahalakshmi, Mohamed Jibri Khaja Peer, Jayaram Archana, and Navaneethan Mani. &quot;Synergistic Lattice Softening and Polaron Engineering in Cu2+-Doped Cs2SnCl6: Decoupling Thermal and Electrical Transport for Enhanced Thermoelectric Performance.&quot; The Journal of Physical Chemistry Letters 17, no. 10 (2026): 3030-3038." data-copy-msg="Citation copied"><svg class="i"><use href="#i-copy"/></svg>Copy citation</button>
+            <a class="btn-sm" target="_blank" rel="noopener" href="https://scholar.google.com/scholar?q=%22Synergistic+Lattice+Softening+and+Polaron+Engineering+in+Cu2%2B-Doped+Cs2SnCl6%22"><svg class="i"><use href="#i-ext"/></svg>Find paper</a>
+          </div>
+        </div>
+      </details>
+    </li>
+    <li class="pub" data-tags="published">
+      <details>
+        <summary>
+          <div class="pub-meta"><span class="badge ok">Published</span><span>2025</span></div>
+          <h3 class="pub-title">Tunable polaronic transport and thermal conductivity in K<sup>+</sup>-doped 0D metal halide perovskite Cs<sub>3</sub>Bi<sub>2</sub>I<sub>9</sub></h3>
+          <p class="pub-venue"><em>Applied Physics Letters</em> 127 (22)</p>
+          <span class="chev"><svg class="i"><use href="#i-down"/></svg></span>
+        </summary>
+        <div class="pub-body">
+          <p class="authors"><strong>C. N. Dhivya Mahalakshmi</strong>, K. P. Mohamed Jibri, J. Archana, M. Navaneethan</p>
+          <div class="pub-actions">
+            <button class="btn-sm" type="button" data-copy="C N, Dhivya Mahalakshmi, K. P. Mohamed Jibri, J. Archana, and M. Navaneethan. &quot;Tunable polaronic transport and thermal conductivity in K+ doped 0D metal halide perovskite Cs3Bi2I9.&quot; Applied Physics Letters 127, no. 22 (2025)." data-copy-msg="Citation copied"><svg class="i"><use href="#i-copy"/></svg>Copy citation</button>
+            <a class="btn-sm" target="_blank" rel="noopener" href="https://scholar.google.com/scholar?q=%22Tunable+polaronic+transport+and+thermal+conductivity+in+K%2B+doped+0D+metal+halide+perovskite%22"><svg class="i"><use href="#i-ext"/></svg>Find paper</a>
+          </div>
+        </div>
+      </details>
+    </li>
+    <li class="pub" data-tags="published">
+      <details>
+        <summary>
+          <div class="pub-meta"><span class="badge ok">Published</span><span>2025</span></div>
+          <h3 class="pub-title">Glassy thermal conductivity in halide perovskites: the role of chemical bonding inhomogeneity and lone pair electrons</h3>
+          <p class="pub-venue"><em>Applied Physics Letters</em> 126 (15)</p>
+          <span class="chev"><svg class="i"><use href="#i-down"/></svg></span>
+        </summary>
+        <div class="pub-body">
+          <p class="authors"><strong>C. N. Dhivya Mahalakshmi</strong>, Mohamed Jibri K. P.</p>
+          <div class="pub-actions">
+            <button class="btn-sm" type="button" data-copy="C N, Dhivya Mahalakshmi, and Mohamed Jibri K P. &quot;Glassy thermal conductivity in halide perovskites: The role of chemical bonding inhomogeneity and lone pair electrons.&quot; Applied Physics Letters 126, no. 15 (2025)." data-copy-msg="Citation copied"><svg class="i"><use href="#i-copy"/></svg>Copy citation</button>
+            <a class="btn-sm" target="_blank" rel="noopener" href="https://scholar.google.com/scholar?q=%22Glassy+thermal+conductivity+in+halide+perovskites%22"><svg class="i"><use href="#i-ext"/></svg>Find paper</a>
+          </div>
+        </div>
+      </details>
+    </li>
+    <li class="pub" data-tags="review">
+      <details>
+        <summary>
+          <div class="pub-meta"><span class="badge rev">Under review</span></div>
+          <h3 class="pub-title">Engineering phonon glass electron crystal behaviour through interfacial charge transfer and lone pair induced lattice softening</h3>
+          <p class="pub-venue"><em>Advanced Functional Materials</em></p>
+          <span class="chev"><svg class="i"><use href="#i-down"/></svg></span>
+        </summary>
+        <div class="pub-body">
+          <p class="authors"><strong>Chavali Naresh Dhivya Mahalakshmi</strong>, Mohamed Jibri Khaja Peer, Jayaram Archana, Navaneethan Mani</p>
+          <div class="pub-actions">
+            <button class="btn-sm" type="button" data-copy="Chavali Naresh Dhivya Mahalakshmi, Mohamed Jibri Khaja Peer, Jayaram Archana, and Navaneethan Mani. &quot;Engineering Phonon Glass Electron Crystal Behaviour Through Interfacial Charge Transfer and Lone Pair Induced Lattice Softening.&quot; Advanced Functional Materials (under review)." data-copy-msg="Reference copied"><svg class="i"><use href="#i-copy"/></svg>Copy reference</button>
+          </div>
+        </div>
+      </details>
+    </li>
+    <li class="pub" data-tags="review">
+      <details>
+        <summary>
+          <div class="pub-meta"><span class="badge rev">Under review</span></div>
+          <h3 class="pub-title">Achieving glass-like thermal transport in crystalline halide perovskites: chemical design strategies through anharmonic lattice dynamics and bonding heterogeneity</h3>
+          <p class="pub-venue"><em>The Chemical Record</em></p>
+          <span class="chev"><svg class="i"><use href="#i-down"/></svg></span>
+        </summary>
+        <div class="pub-body">
+          <p class="authors"><strong>Chavali Naresh Dhivya Mahalakshmi</strong>, Mohamed Jibri Khaja Peer, Jayaram Archana, Navaneethan Mani</p>
+          <div class="pub-actions">
+            <button class="btn-sm" type="button" data-copy="Chavali Naresh Dhivya Mahalakshmi, Mohamed Jibri Khaja Peer, Jayaram Archana, and Navaneethan Mani. &quot;Achieving Glass-Like Thermal Transport in Crystalline Halide Perovskites: Chemical Design Strategies Through Anharmonic Lattice Dynamics and Bonding Heterogeneity.&quot; The Chemical Record (under review)." data-copy-msg="Reference copied"><svg class="i"><use href="#i-copy"/></svg>Copy reference</button>
+          </div>
+        </div>
+      </details>
+    </li>
+    <li class="pub" data-tags="review">
+      <details>
+        <summary>
+          <div class="pub-meta"><span class="badge sub">Submitted</span></div>
+          <h3 class="pub-title">Chemically active 0D halide perovskite heterointerfaces enable defect engineering and lattice softening in Cu<sub>3</sub>SbSe<sub>4</sub></h3>
+          <p class="pub-venue"><em>Journal of Materials Chemistry A</em></p>
+          <span class="chev"><svg class="i"><use href="#i-down"/></svg></span>
+        </summary>
+        <div class="pub-body">
+          <p class="authors"><strong>Chavali Naresh Dhivya Mahalakshmi</strong>, Mohamed Jibri Khaja Peer, Jayaram Archana, Navaneethan Mani</p>
+          <div class="pub-actions">
+            <button class="btn-sm" type="button" data-copy="Chavali Naresh Dhivya Mahalakshmi, Mohamed Jibri Khaja Peer, Jayaram Archana, and Navaneethan Mani. &quot;Chemically Active 0D Halide Perovskite Heterointerfaces Enable Defect Engineering and Lattice Softening in Cu3SbSe4.&quot; Journal of Materials Chemistry A (submitted)." data-copy-msg="Reference copied"><svg class="i"><use href="#i-copy"/></svg>Copy reference</button>
+          </div>
+        </div>
+      </details>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ JOURNEY ============ -->
+<section class="sec" id="journey">
+  <div class="sec-head reveal"><span class="sec-num">04</span><h2>Journey</h2><span class="sec-rule"></span></div>
+  <div class="filters reveal" id="tlFilters" role="group" aria-label="Filter journey">
+    <button type="button" class="chip on" data-filter="all" aria-pressed="true">All <span>6</span></button>
+    <button type="button" class="chip" data-filter="edu" aria-pressed="false">Degrees <span>4</span></button>
+    <button type="button" class="chip" data-filter="res" aria-pressed="false">Research roles <span>2</span></button>
+    <button type="button" class="chip" data-filter="jp" aria-pressed="false">In Japan <span>2</span></button>
+  </div>
+  <ol class="timeline reveal" id="tlList">
+    <li class="tl now" data-tags="edu jp" style="--c:var(--hot)">
+      <div class="tl-card">
+        <div class="tl-when"><span class="now-pill">NOW</span>Oct 2025 – present<span class="tl-where-pill">JAPAN</span></div>
+        <h3>Doctoral Student (Engineering)</h3>
+        <p>Department of Nanovision Technology<br>Shizuoka University, Japan</p>
+      </div>
+    </li>
+    <li class="tl" data-tags="res jp" style="--c:var(--hot)">
+      <div class="tl-card">
+        <div class="tl-when">Jan 2025 – Mar 2025<span class="tl-where-pill">JAPAN</span></div>
+        <h3>JASSO Special Research Exchange Student</h3>
+        <p>Mathematical Informatics<br>Nara Institute of Science and Technology (NAIST), Japan</p>
+        <p class="extra">Supervisor: Prof. Kazushi Ikeda</p>
+      </div>
+    </li>
+    <li class="tl now" data-tags="edu" style="--c:var(--mid)">
+      <div class="tl-card">
+        <div class="tl-when"><span class="now-pill">NOW</span>Jan 2024 – present<span class="tl-where-pill">INDIA</span></div>
+        <h3>Doctoral Student (Chemistry)</h3>
+        <p>Nanotechnology Research Centre<br>SRMIST, Chennai, India</p>
+      </div>
+    </li>
+    <li class="tl" data-tags="res" style="--c:var(--mid)">
+      <div class="tl-card">
+        <div class="tl-when">Feb 2023 – Aug 2023<span class="tl-where-pill">INDIA</span></div>
+        <h3>Project Fellow (ALU-RUSA 2.0 EIR)</h3>
+        <p>Department of Nanoscience and Technology<br>Alagappa University, Karaikudi, India</p>
+        <p class="extra">Project: Design and development of ester-based carbon quantum dots for sensing applications</p>
+      </div>
+    </li>
+    <li class="tl" data-tags="edu" style="--c:var(--cold)">
+      <div class="tl-card">
+        <div class="tl-when">Jun 2021 – Apr 2023<span class="tl-where-pill">INDIA</span></div>
+        <h3>M.Sc. Chemistry</h3>
+        <p>Department of Nanoscience and Technology<br>Alagappa University, Karaikudi, India</p>
+        <span class="grade">CGPA 9.0</span><span class="grade gold">University Rank 1</span>
+      </div>
+    </li>
+    <li class="tl" data-tags="edu" style="--c:var(--cold)">
+      <div class="tl-card">
+        <div class="tl-when">Jun 2018 – Apr 2021<span class="tl-where-pill">INDIA</span></div>
+        <h3>B.Sc. Chemistry</h3>
+        <p>Department of Chemistry<br>Bishop Heber College, Trichy, India</p>
+        <span class="grade">CGPA 8.6</span>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ TALKS ============ -->
+<section class="sec" id="talks">
+  <div class="sec-head reveal"><span class="sec-num">05</span><h2>Conferences</h2><span class="sec-rule"></span></div>
+  <div class="talks-wrap reveal">
+    <ol class="talks" id="talkList">
+      <li class="talk">
+        <div class="talk-top"><span class="talk-year">2026</span><span class="talk-type poster">Poster</span></div>
+        <div class="talk-acr">AFMD-2026</div>
+        <p class="talk-title">Decoupling thermal and electrical transport through halide–chalcogenide hybridization in Cu<sub>2</sub>SnSe<sub>4</sub> thermoelectrics</p>
+        <p class="talk-ev">Second International Conference on Advanced Functional Materials and Devices</p>
+      </li>
+      <li class="talk">
+        <div class="talk-top"><span class="talk-year">2026</span><span class="talk-type oral">Presentation</span></div>
+        <div class="talk-acr">ISFAR-2026</div>
+        <p class="talk-title">Synergistic composite engineering of 0D halide perovskite in CuSe enables ultra-low thermal conductivity and high thermoelectric performance</p>
+        <p class="talk-ev">12th International Symposium toward the Future of Advanced Research</p>
+      </li>
+      <li class="talk">
+        <div class="talk-top"><span class="talk-year">2025</span><span class="talk-type poster">Poster</span></div>
+        <div class="talk-acr">ICONN-2025</div>
+        <p class="talk-title">Unravelling carrier dynamics and phonon transport in Cu<sup>2+</sup>-doped vacancy-ordered layered perovskite Cs<sub>2</sub>SnCl<sub>6</sub></p>
+        <p class="talk-ev">8th International Conference on Nanoscience and Nanotechnology</p>
+      </li>
+      <li class="talk">
+        <div class="talk-top"><span class="talk-year">2024</span><span class="talk-type poster">Poster</span></div>
+        <div class="talk-acr">AFMD-2024</div>
+        <p class="talk-title">Investigation of lead-free halide perovskites for thermoelectric applications</p>
+        <p class="talk-ev">International Conference on Advanced Functional Materials and Devices</p>
+      </li>
+      <li class="talk">
+        <div class="talk-top"><span class="talk-year">2023</span><span class="talk-type poster">Poster</span></div>
+        <div class="talk-acr">ICANEE 2023</div>
+        <p class="talk-title">Synthesis and development of ester-based carbon quantum dots for sensing applications</p>
+        <p class="talk-ev">International Conference on Advanced Nanomaterials for Energy and Environmental Applications</p>
+      </li>
+      <li class="talk">
+        <div class="talk-top"><span class="talk-year">2018</span><span class="talk-type">Workshop</span></div>
+        <div class="talk-acr">ATIC 18</div>
+        <p class="talk-title">Analytical Techniques &amp; Instrumentation for Chemists</p>
+        <p class="talk-ev">Regional-level workshop (participant)</p>
+      </li>
+      <li class="talk">
+        <div class="talk-top"><span class="talk-year">2018</span><span class="talk-type">Seminar</span></div>
+        <div class="talk-acr">INSA</div>
+        <p class="talk-title">Accelerators for Science and Society; Evolution of the Periodic Table of Elements and the Chart of Nuclides</p>
+        <p class="talk-ev">One-day seminar sponsored by the Indian National Science Academy (participant)</p>
+      </li>
+    </ol>
+    <div class="talks-nav">
+      <span class="talks-count" id="talkCount">1 / 7</span>
+      <span class="talks-dots" id="talkDots" aria-hidden="true"></span>
+      <span style="display:flex;gap:6px">
+        <button class="icon-btn" id="talkPrev" type="button" aria-label="Previous conference"><svg class="i"><use href="#i-left"/></svg></button>
+        <button class="icon-btn" id="talkNext" type="button" aria-label="Next conference"><svg class="i"><use href="#i-right"/></svg></button>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="sec" id="skills">
+  <div class="sec-head reveal"><span class="sec-num">06</span><h2>Instrumentation</h2><span class="sec-rule"></span></div>
+  <div class="skill-seg reveal" id="skillFilters" role="group" aria-label="Filter instruments">
+    <button type="button" class="chip on" data-filter="all" aria-pressed="true">All <span>13</span></button>
+    <button type="button" class="chip" data-filter="h" aria-pressed="false">Hands-on <span>8</span></button>
+    <button type="button" class="chip" data-filter="a" aria-pressed="false">Analysis &amp; interpretation <span>8</span></button>
+  </div>
+  <p class="legend reveal"><span><i class="dot h"></i>Hands-on</span><span><i class="dot a"></i>Analysis &amp; interpretation</span></p>
+  <ul class="skills reveal" id="skillList">
+    <li><button type="button" class="skill" data-k="h a" data-d="Reveals crystal structure and phase purity from how X-rays scatter off planes of atoms.">X-ray diffraction<span class="dots"><i class="dot h"></i><i class="dot a"></i></span></button></li>
+    <li><button type="button" class="skill" data-k="h a" data-d="Probes lattice vibrations (phonons) and chemical bonding, central to understanding how heat moves.">Raman spectroscopy<span class="dots"><i class="dot h"></i><i class="dot a"></i></span></button></li>
+    <li><button type="button" class="skill" data-k="h a" data-d="Measures how many charge carriers a material has and how freely they move (mobility).">Hall measurement<span class="dots"><i class="dot h"></i><i class="dot a"></i></span></button></li>
+    <li><button type="button" class="skill" data-k="a" data-d="The two key thermoelectric measurements: voltage per degree of temperature difference, and resistance to charge flow.">Seebeck &amp; electrical resistivity<span class="dots"><i class="dot a"></i></span></button></li>
+    <li><button type="button" class="skill" data-k="a" data-d="A laser pulse heats one face of a sample; timing the heat's arrival on the other face gives thermal diffusivity and hence thermal conductivity.">Laser flash diffusivity<span class="dots"><i class="dot a"></i></span></button></li>
+    <li><button type="button" class="skill" data-k="a" data-d="Images materials down to the atomic scale to show crystal structure, interfaces and defects.">HR-TEM / STEM<span class="dots"><i class="dot a"></i></span></button></li>
+    <li><button type="button" class="skill" data-k="a" data-d="High-resolution electron imaging of surface morphology and microstructure.">FESEM<span class="dots"><i class="dot a"></i></span></button></li>
+    <li><button type="button" class="skill" data-k="a" data-d="Identifies which elements are at a surface and their chemical (oxidation) states.">X-ray photoelectron spectroscopy<span class="dots"><i class="dot a"></i></span></button></li>
+    <li><button type="button" class="skill" data-k="h" data-d="Measures how a material absorbs light, used to estimate its optical band gap.">UV-Vis spectrophotometry<span class="dots"><i class="dot h"></i></span></button></li>
+    <li><button type="button" class="skill" data-k="h" data-d="Identifies chemical bonds and functional groups from infrared absorption.">FT-IR spectroscopy<span class="dots"><i class="dot h"></i></span></button></li>
+    <li><button type="button" class="skill" data-k="h" data-d="Maps elemental composition across a sample at the micrometre scale using a focused electron beam.">FE electron probe micro-analyser<span class="dots"><i class="dot h"></i></span></button></li>
+    <li><button type="button" class="skill" data-k="h" data-d="Separates how ions and electrons conduct through a solid by sweeping the frequency of an applied signal.">Solid-state impedance<span class="dots"><i class="dot h"></i></span></button></li>
+    <li><button type="button" class="skill" data-k="h" data-d="Measures light emitted after excitation, revealing defects and how charges recombine.">Photoluminescence spectroscopy<span class="dots"><i class="dot h"></i></span></button></li>
+  </ul>
+  <div class="skill-detail reveal" id="skillDetail" aria-live="polite">
+    <span class="sd-name">Tap an instrument</span>
+    <p>to see what it measures.</p>
+  </div>
+</section>
+
+<!-- ============ AWARDS ============ -->
+<section class="sec" id="awards">
+  <div class="sec-head reveal"><span class="sec-num">07</span><h2>Awards &amp; <em>honours</em></h2><span class="sec-rule"></span></div>
+  <ul class="awards">
+    <li class="award reveal">
+      <span class="medal" aria-hidden="true">1</span>
+      <div><h3>University 1st Rank</h3><p>M.Sc. Chemistry, Alagappa University</p><span class="yr">2023</span></div>
+    </li>
+    <li class="award reveal">
+      <span class="medal blue" aria-hidden="true">★</span>
+      <div><h3>PG Indira Gandhi SGC Scholarship</h3><p>University Grants Commission (UGC), Government of India</p><span class="yr">2021–22 &amp; 2022–23</span></div>
+    </li>
+    <li class="award reveal">
+      <span class="medal silver" aria-hidden="true">5%</span>
+      <div><h3>Elite + Silver medal, top 5%</h3><p>NPTEL course on Coordination Chemistry</p><span class="yr">April 2022</span></div>
+    </li>
+    <li class="award reveal">
+      <span class="medal plum" aria-hidden="true">✦</span>
+      <div><h3>Best Presentation Award</h3><p>Student Conclave: Science through Inquiry &amp; Research (STIR), Bishop Heber College, Trichy (oral)</p><span class="yr">2021</span></div>
+    </li>
+  </ul>
+</section>
+
+<!-- ============ REFERENCES ============ -->
+<section class="sec" id="references" aria-labelledby="refTitle">
+  <div class="sec-head reveal"><span class="sec-num">08</span><h2 id="refTitle">References</h2><span class="sec-rule"></span></div>
+  <ul class="refs">
+    <li class="ref reveal"><h3>Dr. M. Navaneethan</h3><p>Professor (Research), Nanotechnology Research Centre<br>SRMIST, Chennai, India</p></li>
+    <li class="ref reveal"><h3>Dr. K. P. Mohamed Jibri</h3><p>Assistant Professor (Research), Nanotechnology Research Centre<br>SRMIST, Chennai, India</p></li>
+  </ul>
+  <p class="fine reveal" style="margin-top:12px">Referee contact details available on request.</p>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="sec" id="contact">
+  <div class="contact reveal">
+    <h2>Let's talk <em>thermoelectrics.</em></h2>
+    <p>Happy to discuss the poster, collaborations or opportunities.</p>
+    <ul class="clist">
+      <li>
+        <a href="mailto:dhivya.mahalakshmi.25@shizuoka.ac.jp"><span class="lbl">Shizuoka University</span><span class="val">dhivya.mahalakshmi.25@shizuoka.ac.jp</span></a>
+        <button class="icon-btn" type="button" data-copy="dhivya.mahalakshmi.25@shizuoka.ac.jp" data-copy-msg="Email copied" aria-label="Copy Shizuoka University email"><svg class="i"><use href="#i-copy"/></svg></button>
+      </li>
+      <li>
+        <a href="mailto:dhivyamc@srmist.edu.in"><span class="lbl">SRMIST</span><span class="val">dhivyamc@srmist.edu.in</span></a>
+        <button class="icon-btn" type="button" data-copy="dhivyamc@srmist.edu.in" data-copy-msg="Email copied" aria-label="Copy SRMIST email"><svg class="i"><use href="#i-copy"/></svg></button>
+      </li>
+      <li>
+        <a href="mailto:dhivyacn01@gmail.com"><span class="lbl">Personal</span><span class="val">dhivyacn01@gmail.com</span></a>
+        <button class="icon-btn" type="button" data-copy="dhivyacn01@gmail.com" data-copy-msg="Email copied" aria-label="Copy personal email"><svg class="i"><use href="#i-copy"/></svg></button>
+      </li>
+    </ul>
+    <div class="actions">
+      <a class="btn" href="dhivya-mahalakshmi.vcf" download="Dhivya-Mahalakshmi.vcf"><svg class="i"><use href="#i-add"/></svg>Save contact</a>
+      <a class="btn ghost" href="https://scholar.google.com/citations?user=x8tt12AAAAAJ&amp;hl=en" target="_blank" rel="noopener"><svg class="i"><use href="#i-cap"/></svg>Google Scholar</a>
+      <a class="btn ghost" href="https://orcid.org/0009-0005-5352-1912" target="_blank" rel="noopener"><svg class="i"><use href="#i-orcid"/></svg>ORCID</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span>© 2026 C. N. Dhivya Mahalakshmi</span>
+  <span>Updated November 2026</span>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  'use strict';
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var root = document.documentElement;
+  var reduceMotion = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- toast + copy ---------- */
+  var toast = $('#toast'), toastTimer;
+  function say(msg){ toast.textContent = msg; toast.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 1900); }
+  function fallbackCopy(text){
+    var ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed'; ta.style.top = '0'; ta.style.opacity = '0'; document.body.appendChild(ta);
+    ta.select(); var ok = false; try { ok = document.execCommand('copy'); } catch (e) {} ta.remove(); return ok;
+  }
+  function copyText(text){
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text).then(function(){ return true; }, function(){ return fallbackCopy(text); });
+    }
+    return Promise.resolve(fallbackCopy(text));
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('[data-copy]'); if (!b) return;
+    e.preventDefault();
+    copyText(b.getAttribute('data-copy')).then(function(ok){ say(ok ? (b.getAttribute('data-copy-msg') || 'Copied') : 'Copy not available here'); });
+  });
+
+  /* ---------- theme ---------- */
+  var metaTheme = document.querySelector('meta[name="theme-color"]');
+  function isDark(){ var t = root.getAttribute('data-theme'); return t ? t === 'dark' : (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches); }
+  function syncMeta(){ metaTheme.setAttribute('content', isDark() ? '#0e1320' : '#f3eee3'); }
+  syncMeta();
+  $('#themeBtn').addEventListener('click', function(){
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('dm-theme', next); } catch (e) {}
+    syncMeta(); if (lattice) lattice.recolor();
+  });
+  if (window.matchMedia) { var mq = matchMedia('(prefers-color-scheme: dark)'); var onMq = function(){ syncMeta(); if (lattice) lattice.recolor(); }; if (mq.addEventListener) mq.addEventListener('change', onMq); }
+
+  /* ---------- share ---------- */
+  $('#shareBtn').addEventListener('click', function(){
+    var url = location.href.split('#')[0];
+    var data = { title: 'C. N. Dhivya Mahalakshmi · Thermoelectrics', text: 'C. N. Dhivya Mahalakshmi, thermoelectric materials researcher', url: url };
+    if (navigator.share) { navigator.share(data).catch(function(){}); }
+    else copyText(url).then(function(ok){ say(ok ? 'Link copied' : 'Copy not available here'); });
+  });
+
+  /* ---------- reveal on scroll ---------- */
+  var reveals = $$('.reveal');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    var rio = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); rio.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.01 });
+    reveals.forEach(function(el){ rio.observe(el); });
+  } else reveals.forEach(function(el){ el.classList.add('in'); });
+
+  /* ---------- count-up ---------- */
+  var counted = false;
+  function countUp(){
+    if (counted) return; counted = true;
+    $$('[data-count]').forEach(function(el){
+      var end = +el.getAttribute('data-count'); if (reduceMotion) { el.textContent = end; return; }
+      var t0 = performance.now(), dur = 900 + end * 60;
+      (function tick(now){ var p = Math.min(1, (now - t0) / dur); var e = 1 - Math.pow(1 - p, 3); el.textContent = Math.round(e * end); if (p < 1) requestAnimationFrame(tick); })(t0);
+    });
+  }
+  if ('IntersectionObserver' in window) {
+    var sio = new IntersectionObserver(function(en){ if (en[0].isIntersecting) { countUp(); sio.disconnect(); } }, { threshold: 0.4 });
+    sio.observe($('#stats'));
+  }
+
+  /* ---------- scroll spy + progress ---------- */
+  var links = $$('.tabs a'), tabs = $('.tabs'), prog = $('#progress');
+  var secs = links.map(function(a){ return document.getElementById(a.getAttribute('href').slice(1)); });
+  var lastActive = null, ticking = false;
+  function spy(){
+    ticking = false;
+    var y = window.scrollY, vh = window.innerHeight, docH = document.documentElement.scrollHeight;
+    prog.style.transform = 'scaleX(' + Math.min(1, y / Math.max(1, docH - vh)) + ')';
+    var cur = -1, probe = y + 110;
+    secs.forEach(function(s, i){ if (s && s.getBoundingClientRect().top + y <= probe) cur = i; });
+    if (y + vh >= docH - 4) cur = secs.length - 1;
+    links.forEach(function(a, i){ a.classList.toggle('active', i === cur); });
+    var a = links[cur];
+    if (a && a !== lastActive) {
+      lastActive = a;
+      tabs.scrollTo({ left: a.offsetLeft - tabs.clientWidth / 2 + a.offsetWidth / 2, behavior: reduceMotion ? 'auto' : 'smooth' });
+    }
+    if (!a) lastActive = null;
+  }
+  window.addEventListener('scroll', function(){ if (!ticking) { ticking = true; requestAnimationFrame(spy); } }, { passive: true });
+  window.addEventListener('resize', spy);
+  spy();
+
+  /* ---------- generic chip filter ---------- */
+  function setupFilter(groupId, itemSel, attr){
+    var g = document.getElementById(groupId); if (!g) return;
+    g.addEventListener('click', function(e){
+      var b = e.target.closest('button[data-filter]'); if (!b) return;
+      $$('button[data-filter]', g).forEach(function(x){ var on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on); });
+      var f = b.getAttribute('data-filter');
+      $$(itemSel).forEach(function(it){
+        var tags = (it.getAttribute(attr) || '').split(' ');
+        var show = f === 'all' || tags.indexOf(f) > -1;
+        if (show && it.hidden) { it.classList.remove('pop'); void it.offsetWidth; it.classList.add('pop'); }
+        it.hidden = !show;
+      });
+    });
+  }
+  setupFilter('pubFilters', '#pubList > li', 'data-tags');
+  setupFilter('tlFilters', '#tlList > li', 'data-tags');
+
+  /* ---------- skills ---------- */
+  var skillBtns = $$('#skillList .skill'), detail = $('#skillDetail');
+  var skillGroup = $('#skillFilters');
+  skillGroup.addEventListener('click', function(e){
+    var b = e.target.closest('button[data-filter]'); if (!b) return;
+    $$('button[data-filter]', skillGroup).forEach(function(x){ var on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on); });
+    var f = b.getAttribute('data-filter');
+    skillBtns.forEach(function(s){ var on = f === 'all' || s.getAttribute('data-k').split(' ').indexOf(f) > -1; s.classList.toggle('dim', !on); });
+  });
+  skillBtns.forEach(function(s){
+    s.addEventListener('click', function(){
+      var wasSel = s.classList.contains('sel');
+      skillBtns.forEach(function(x){ x.classList.remove('sel'); x.setAttribute('aria-pressed', 'false'); });
+      if (wasSel) { detail.innerHTML = '<span class="sd-name">Tap an instrument</span><p>to see what it measures.</p>'; return; }
+      s.classList.add('sel'); s.setAttribute('aria-pressed', 'true');
+      var name = s.firstChild.textContent.trim();
+      var k = s.getAttribute('data-k');
+      var kind = k === 'h a' ? 'Hands-on + analysis' : (k === 'h' ? 'Hands-on' : 'Analysis & interpretation');
+      detail.innerHTML = '';
+      var n = document.createElement('span'); n.className = 'sd-name'; n.textContent = name + ' · ' + kind;
+      var p = document.createElement('p'); p.textContent = s.getAttribute('data-d');
+      detail.appendChild(n); detail.appendChild(p);
+      detail.classList.remove('pop'); void detail.offsetWidth; detail.classList.add('pop');
+    });
+  });
+
+  /* ---------- talks carousel ---------- */
+  var tl = $('#talkList'), talkItems = $$('#talkList > li'), dotsWrap = $('#talkDots'), countEl = $('#talkCount');
+  talkItems.forEach(function(){ dotsWrap.appendChild(document.createElement('i')); });
+  var dots = $$('i', dotsWrap);
+  function talkIndex(){
+    var best = 0, bestD = Infinity, left = tl.getBoundingClientRect().left;
+    talkItems.forEach(function(it, i){ var d = Math.abs(it.getBoundingClientRect().left - left - parseFloat(getComputedStyle(tl).paddingLeft)); if (d < bestD) { bestD = d; best = i; } });
+    if (tl.scrollLeft + tl.clientWidth >= tl.scrollWidth - 4) best = talkItems.length - 1;
+    return best;
+  }
+  function syncTalks(){ var i = talkIndex(); countEl.textContent = (i + 1) + ' / ' + talkItems.length; dots.forEach(function(d, j){ d.classList.toggle('on', j === i); }); }
+  var tTick = false;
+  tl.addEventListener('scroll', function(){ if (!tTick) { tTick = true; requestAnimationFrame(function(){ tTick = false; syncTalks(); }); } }, { passive: true });
+  function goTalk(delta){
+    var i = Math.max(0, Math.min(talkItems.length - 1, talkIndex() + delta));
+    tl.scrollTo({ left: talkItems[i].offsetLeft - talkItems[0].offsetLeft, behavior: reduceMotion ? 'auto' : 'smooth' });
+  }
+  $('#talkPrev').addEventListener('click', function(){ goTalk(-1); });
+  $('#talkNext').addEventListener('click', function(){ goTalk(1); });
+  syncTalks();
+
+  /* ---------- lattice heat demo ---------- */
+  var lattice = (function(){
+    var cv = $('#lattice'); if (!cv || !cv.getContext) return null;
+    var ctx = cv.getContext('2d');
+    var DC = 0.22, DG = 0.03;               // diffusion: ordinary crystal vs phonon glass
+    var W = 0, H = 0, dpr = 1, cols = 0, rows = 0, sp = 0, ox = 0, oy = 0;
+    var T, T2, P, X, Y;
+    var glass = 0, target = 0, visible = false, running = false, frameN = 0;
+    var stops = [], lineCol = '#ccc';
+    var kVal = $('#kVal'), kBar = $('#kBar'), vVal = $('#vVal'), vBar = $('#vBar'), hint = $('#touchHint');
+
+    function parseColor(c){
+      c = (c || '').trim();
+      if (c.charAt(0) === '#') {
+        if (c.length === 4) c = '#' + c[1] + c[1] + c[2] + c[2] + c[3] + c[3];
+        return [parseInt(c.substr(1, 2), 16), parseInt(c.substr(3, 2), 16), parseInt(c.substr(5, 2), 16)];
+      }
+      var m = c.match(/[\d.]+/g); return m ? [+m[0], +m[1], +m[2]] : [128, 128, 128];
+    }
+    function recolor(){
+      var cs = getComputedStyle(root);
+      stops = [[0, parseColor(cs.getPropertyValue('--cold'))], [0.42, parseColor(cs.getPropertyValue('--mid'))],
+               [0.74, parseColor(cs.getPropertyValue('--hot'))], [1, parseColor(cs.getPropertyValue('--amber'))]];
+      lineCol = cs.getPropertyValue('--line').trim() || '#ccc';
+      if (!running) draw(performance.now() / 1000);
+    }
+    function heatCol(t, a){
+      t = t < 0 ? 0 : (t > 1 ? 1 : t);
+      for (var i = 1; i < stops.length; i++) {
+        if (t <= stops[i][0]) {
+          var s0 = stops[i - 1], s1 = stops[i], k = (t - s0[0]) / (s1[0] - s0[0]);
+          var r = s0[1][0] + (s1[1][0] - s0[1][0]) * k, g = s0[1][1] + (s1[1][1] - s0[1][1]) * k, b = s0[1][2] + (s1[1][2] - s0[1][2]) * k;
+          return 'rgba(' + (r | 0) + ',' + (g | 0) + ',' + (b | 0) + ',' + (a == null ? 1 : a) + ')';
+        }
+      }
+      return 'rgb(0,0,0)';
+    }
+    function resize(){
+      var r = cv.getBoundingClientRect(); if (!r.width) return;
+      dpr = Math.min(window.devicePixelRatio || 1, 2); W = r.width; H = r.height;
+      cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      sp = W < 520 ? 24 : 28;
+      var nc = Math.max(8, Math.floor((W - 64) / sp) + 1), nr = Math.max(5, Math.floor((H - 70) / sp) + 1);
+      if (nc !== cols || nr !== rows) {
+        cols = nc; rows = nr; var n = cols * rows;
+        T = new Float32Array(n); T2 = new Float32Array(n); X = new Float32Array(n); Y = new Float32Array(n); P = new Float32Array(n * 6);
+        for (var i = 0; i < n; i++) {
+          P[i * 6] = Math.random() * 6.283; P[i * 6 + 1] = Math.random() * 6.283;
+          P[i * 6 + 2] = 0.7 + Math.random() * 0.7; P[i * 6 + 3] = 0.7 + Math.random() * 0.7;
+          P[i * 6 + 4] = Math.random() * 2 - 1; P[i * 6 + 5] = Math.random() * 2 - 1;
+        }
+      }
+      ox = (W - (cols - 1) * sp) / 2; oy = (H - (rows - 1) * sp) / 2 + 6;
+      if (!running) draw(performance.now() / 1000);
+    }
+    function step(D, q){
+      for (var y = 0; y < rows; y++) {
+        var row = y * cols;
+        for (var x = 0; x < cols; x++) {
+          var i = row + x;
+          if (x === cols - 1) { T2[i] = 0; continue; }            // cold sink
+          var t = T[i];
+          var l = x > 0 ? T[i - 1] : t, r = T[i + 1], u = y > 0 ? T[i - cols] : t, d = y < rows - 1 ? T[i + cols] : t;
+          var v = t + D * (l + r + u + d - 4 * t);
+          if (x === 0) v += q;                                    // steady heat input on the hot side
+          T2[i] = v > 1.6 ? 1.6 : v;
+        }
+      }
+      var tmp = T; T = T2; T2 = tmp;
+    }
+    function draw(time){
+      if (!T || !stops.length) return;
+      ctx.clearRect(0, 0, W, H);
+      var amp = reduceMotion ? 0 : 1, n = cols * rows;
+      // hot plate & cold sink
+      var plateH = (rows - 1) * sp + 22, py0 = oy - 11;
+      ctx.fillStyle = heatCol(0.9 + 0.1 * Math.sin(time * 3)); roundRect(ox - sp * 0.95 - 4, py0, 8, plateH, 4);
+      ctx.fillStyle = heatCol(0.0); roundRect(ox + (cols - 1) * sp + sp * 0.95 - 4, py0, 8, plateH, 4);
+      // positions
+      for (var y = 0; y < rows; y++) for (var x = 0; x < cols; x++) {
+        var i = y * cols + x, k = i * 6, big = ((x + y) & 1) === 0, Ti = T[i] > 1.2 ? 1.2 : T[i];
+        var dis = glass * sp * 0.13;
+        var a = amp * (0.35 + 5.2 * Ti) * (big ? 1 : 0.7) * (1 + glass * (big ? 0.9 : 0.25));
+        var px = ox + x * sp + P[k + 4] * dis + a * Math.sin(time * P[k + 2] * 9 + P[k]);
+        var py = oy + y * sp + P[k + 5] * dis + a * Math.sin(time * P[k + 3] * 9 + P[k + 1]);
+        if (big && glass > 0.02) { px += a * 0.55 * glass * Math.sin(time * P[k + 2] * 23 + P[k + 1]); py += a * 0.45 * glass * Math.cos(time * P[k + 3] * 19 + P[k]); }
+        X[i] = px; Y[i] = py;
+      }
+      // bonds
+      ctx.strokeStyle = lineCol; ctx.lineWidth = 1.3; ctx.beginPath();
+      for (var j = 0; j < n; j++) {
+        var cx = j % cols;
+        if (cx < cols - 1) { ctx.moveTo(X[j], Y[j]); ctx.lineTo(X[j + 1], Y[j + 1]); }
+        if (j + cols < n) { ctx.moveTo(X[j], Y[j]); ctx.lineTo(X[j + cols], Y[j + cols]); }
+      }
+      ctx.stroke();
+      // glow for hot atoms
+      for (j = 0; j < n; j++) if (T[j] > 0.45) { ctx.fillStyle = heatCol(T[j], 0.16); ctx.beginPath(); ctx.arc(X[j], Y[j], 11, 0, 6.2832); ctx.fill(); }
+      // atoms
+      for (j = 0; j < n; j++) {
+        var bx = j % cols, by = (j / cols) | 0, isBig = ((bx + by) & 1) === 0;
+        ctx.fillStyle = heatCol(T[j]); ctx.beginPath(); ctx.arc(X[j], Y[j], isBig ? 5.4 : 3.3, 0, 6.2832); ctx.fill();
+      }
+    }
+    function roundRect(x, y, w, h, r){ ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); ctx.fill(); }
+    function meters(D){
+      var s = 0; for (var y = 0; y < rows; y++) s += Math.min(1, T[y * cols]); var dT = s / rows;
+      var kRel = D / DC;
+      kVal.textContent = kRel.toFixed(2); kBar.style.transform = 'scaleX(' + kRel.toFixed(3) + ')';
+      vVal.textContent = Math.round(dT * 100) + '%'; vBar.style.transform = 'scaleX(' + dT.toFixed(3) + ')';
+    }
+    var last = 0;
+    function loop(now){
+      if (!visible || document.hidden) { running = false; last = 0; return; }
+      requestAnimationFrame(loop);
+      // time-based so it behaves the same at 30, 60 or 120 fps (capped after a pause)
+      var f = last ? Math.min(6, (now - last) / 16.667) : 1; last = now;
+      glass += (target - glass) * (1 - Math.pow(0.95, f));
+      var D = DC + (DG - DC) * glass, q = DG / (cols - 1);
+      var sub = Math.max(1, Math.round(Math.ceil(cols * cols / 16) * f));
+      for (var s = 0; s < sub; s++) step(D, q);
+      draw(now / 1000);
+      if ((frameN++ & 3) === 0) meters(D);
+    }
+    function start(){ if (!running && visible && !document.hidden) { running = true; requestAnimationFrame(loop); } }
+
+    // pointer heating
+    var hinted = false;
+    function addHeat(e){
+      var r = cv.getBoundingClientRect(), mx = e.clientX - r.left, my = e.clientY - r.top, rad = sp * 1.6;
+      for (var i = 0; i < cols * rows; i++) {
+        var dx = (ox + (i % cols) * sp) - mx, dy = (oy + ((i / cols) | 0) * sp) - my, d2 = dx * dx + dy * dy;
+        if (d2 < rad * rad * 2.2 && (i % cols) !== cols - 1) T[i] = Math.min(1.6, T[i] + 0.55 * Math.exp(-d2 / (rad * rad)));
+      }
+      if (!hinted) { hinted = true; hint.style.opacity = '0'; }
+    }
+    cv.addEventListener('pointerdown', addHeat);
+    cv.addEventListener('pointermove', function(e){ if (e.buttons || e.pointerType === 'touch') addHeat(e); });
+
+    // material toggle
+    var seg = $('#modeSeg'), text = $('#demoText');
+    var copy = {
+      crystal: '<b>Ordinary crystal.</b> Lattice vibrations (phonons) carry heat straight across, so the hot and cold sides even out and very little voltage is produced.',
+      glass: '<b>Phonon glass.</b> Softened bonds and rattling atoms scatter phonons, so heat piles up on the hot side and the voltage climbs. Charge can still flow: the &ldquo;phonon glass, electron crystal&rdquo; idea behind this research.'
+    };
+    seg.addEventListener('click', function(e){
+      var b = e.target.closest('button[data-mode]'); if (!b) return;
+      var m = b.getAttribute('data-mode'); seg.setAttribute('data-mode', m); target = m === 'glass' ? 1 : 0;
+      $$('button', seg).forEach(function(x){ x.setAttribute('aria-pressed', x === b); });
+      text.style.opacity = '0'; setTimeout(function(){ text.innerHTML = copy[m]; text.style.opacity = '1'; }, 180);
+    });
+    $('#resetBtn').addEventListener('click', function(){ if (T) T.fill(0); if (!running) draw(performance.now() / 1000); });
+
+    recolor(); resize();
+    window.addEventListener('resize', resize);
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function(en){ visible = en[0].isIntersecting; start(); }, { threshold: 0.05 }).observe(cv);
+    } else { visible = true; start(); }
+    document.addEventListener('visibilitychange', start);
+    return { recolor: recolor };
+  })();
+})();
+</script>
+</body>
+</html>

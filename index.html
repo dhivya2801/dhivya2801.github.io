@@ -106,6 +106,7 @@ sub,sup{font-size:.68em;line-height:0}
 }
 .icon-btn:hover{border-color:var(--ink-3)}
 .icon-btn:active{transform:scale(.94)}
+.icon-btn.off{opacity:.35;cursor:default;transform:none}
 .theme-btn .sun{display:none}
 :root[data-theme="dark"] .theme-btn .sun{display:block}
 :root[data-theme="dark"] .theme-btn .moon{display:none}
@@ -983,21 +984,31 @@ footer{max-width:900px;margin:0 auto;padding:26px 16px calc(36px + env(safe-area
   var tl = $('#talkList'), talkItems = $$('#talkList > li'), dotsWrap = $('#talkDots'), countEl = $('#talkCount');
   talkItems.forEach(function(){ dotsWrap.appendChild(document.createElement('i')); });
   var dots = $$('i', dotsWrap);
-  function talkIndex(){
-    var best = 0, bestD = Infinity, left = tl.getBoundingClientRect().left;
-    talkItems.forEach(function(it, i){ var d = Math.abs(it.getBoundingClientRect().left - left - parseFloat(getComputedStyle(tl).paddingLeft)); if (d < bestD) { bestD = d; best = i; } });
-    if (tl.scrollLeft + tl.clientWidth >= tl.scrollWidth - 4) best = talkItems.length - 1;
-    return best;
+  var talkPrev = $('#talkPrev'), talkNext = $('#talkNext');
+  // Scroll position at which each card sits at the left edge (cards near the end may be unreachable on wide screens).
+  function talkStops(){ var base = talkItems[0].offsetLeft; return talkItems.map(function(it){ return it.offsetLeft - base; }); }
+  function talkMax(){ return Math.max(0, tl.scrollWidth - tl.clientWidth); }
+  function syncTalks(){
+    var stops = talkStops(), x = tl.scrollLeft, max = talkMax(), i = 0, bestD = Infinity;
+    stops.forEach(function(s, j){ var d = Math.abs(Math.min(s, max) - x); if (d < bestD - 0.5) { bestD = d; i = j; } });
+    if (x >= max - 2) i = talkItems.length - 1;
+    countEl.textContent = (i + 1) + ' / ' + talkItems.length;
+    dots.forEach(function(d, j){ d.classList.toggle('on', j === i); });
+    // dim (not disable) at the ends, so a click always works from the real scroll position
+    var atStart = x <= 2, atEnd = x >= max - 2;
+    talkPrev.classList.toggle('off', atStart); talkPrev.setAttribute('aria-disabled', atStart);
+    talkNext.classList.toggle('off', atEnd); talkNext.setAttribute('aria-disabled', atEnd);
   }
-  function syncTalks(){ var i = talkIndex(); countEl.textContent = (i + 1) + ' / ' + talkItems.length; dots.forEach(function(d, j){ d.classList.toggle('on', j === i); }); }
-  var tTick = false;
-  tl.addEventListener('scroll', function(){ if (!tTick) { tTick = true; requestAnimationFrame(function(){ tTick = false; syncTalks(); }); } }, { passive: true });
-  function goTalk(delta){
-    var i = Math.max(0, Math.min(talkItems.length - 1, talkIndex() + delta));
-    tl.scrollTo({ left: talkItems[i].offsetLeft - talkItems[0].offsetLeft, behavior: reduceMotion ? 'auto' : 'smooth' });
+  tl.addEventListener('scroll', syncTalks, { passive: true });
+  function goTalk(dir){
+    var stops = talkStops(), x = tl.scrollLeft, max = talkMax(), target, j;
+    if (dir > 0) { target = max; for (j = 0; j < stops.length; j++) if (stops[j] > x + 4) { target = Math.min(stops[j], max); break; } }
+    else { target = 0; for (j = stops.length - 1; j >= 0; j--) if (stops[j] < x - 4) { target = stops[j]; break; } }
+    tl.scrollTo({ left: target, behavior: reduceMotion ? 'auto' : 'smooth' });
   }
-  $('#talkPrev').addEventListener('click', function(){ goTalk(-1); });
-  $('#talkNext').addEventListener('click', function(){ goTalk(1); });
+  talkPrev.addEventListener('click', function(){ goTalk(-1); });
+  talkNext.addEventListener('click', function(){ goTalk(1); });
+  window.addEventListener('resize', syncTalks);
   syncTalks();
 
   /* ---------- lattice heat demo ---------- */
